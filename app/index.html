@@ -1,21 +1,44 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="Bare Progressive Web App">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bare Progressive Web App</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Bare Progressive Web App">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bare Progressive Webapp</title>
 
-  <!-- web manifest -->
-  <link rel="manifest" href="manifest.json">
+	<!-- web manifest -->
+	<link rel="manifest" href="manifest.json">
 
-  <!-- configuration for android. theme color and homescreen -->
-  <meta name="theme-color" content="#2E3AA1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Bare Progressive Web App">
-  <link rel="icon" sizes="192x192" href="images/icons/chrome-touch-icon-192x192.png ">
+  <!-- styles -->
+  <link rel="stylesheet" href="styles/main.css">
+
+	<!-- configuration for android. theme color and homescreen -->
+	<meta name="theme-color" content="#2E3AA1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Bare Progressive Web App">
+	<link rel="icon" sizes="192x192" href="images/icons/chrome-touch-icon-192x192.png ">
 </head>
 <body>
-  <script src="main.js"></script>
+	<header>
+		<h1>Bare Progress Webapp</h1>
+	</header>
+
+	<main class="main"></main>
+
+	<div class="dialog-container"></div>
+
+	<div class="loader">
+		<svg viewBox="0 0 32 32" width="32" height="32">
+			<circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+		</svg>
+	</div>
+	<script src="scripts/main.js"></script>
+	<script>
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('service-worker.js').then(function() {
+			console.log("Service Worker Registered");
+		});
+	}
+</script>
 </body>
 </html>
