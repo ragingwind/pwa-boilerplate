@@ -1,6 +1,7 @@
 {
   "private": true,
   "version": "0.0.0",
+	"productName": "BarePWA",
   "description": "Bare Progressive Web App",
   "license": "MIT",
   "repository": "ragingwind/bare-pwa",
@@ -13,7 +14,7 @@
     "node": ">=5.0"
   },
   "scripts": {
-    "precache": "sw-precache --root=app",
+    "precache": "sw-precache --cache-id=\"$npm_package_productName\" --root=app",
     "postinstall": "pwa-manifest ./app ./app/images/icons --icons=./res/icon.png",
     "start": "npm run precache && http-server ./app -d -p 9000"
   },

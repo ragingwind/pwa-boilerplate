@@ -29,9 +29,9 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["images/icons/apple-touch-icon-152x152.png","a8d2242a06870099f7da7580a619d818"],["images/icons/chrome-splashscreen-icon-384x384.png","2e6ad6f96e98ba5971204859bf6e5758"],["images/icons/chrome-touch-icon-192x192.png","d6332cd664198e50cf71e6b5a99d5d63"],["images/icons/icon-128x128.png","07c63e27421bd16e03544e5caa8581e9"],["images/icons/icon-512x512.png","6b14fe7e06be08768caa3074ac0ddc11"],["images/icons/icon-72x72.png","86616001d47d92f4a33565846549c107"],["images/icons/icon-96x96.png","af39768c617073db83b7e0ad6e332763"],["images/icons/ms-touch-icon-144x144-precomposed.png","eac3f310b64fb5e2395cbf59f37c3420"],["index.html","7cb65ca80bd9c1a387043d4ec98e3348"],["manifest.json","fda7d1aee72bec18ca2384804db15756"],["npm-debug.log","eb596c18ae9e0446f0f60bd19767ab06"],["scripts/main.js","9cee67b85f59bd36e13ea95ad63d0842"],["styles/main.css","d41d8cd98f00b204e9800998ecf8427e"]];
+var PrecacheConfig = [["images/icons/apple-touch-icon-152x152.png","5c1a7c28d47287cd30fac4f3a28d1a8b"],["images/icons/chrome-splashscreen-icon-384x384.png","c16c62c51961d195f9306a7f3a8825f1"],["images/icons/chrome-touch-icon-192x192.png","0ad89bc5c2a47f9d942528ce6379a9e9"],["images/icons/icon-128x128.png","d69c7d408c9eb146ed87718c05c54cb1"],["images/icons/icon-512x512.png","cd092ddbc3a5fb981b54d7150315dc23"],["images/icons/icon-72x72.png","0aa358b0573adc305f30ebd85df7e25b"],["images/icons/icon-96x96.png","9be2401df0b3a50d71c700acdf771d9b"],["images/icons/ms-touch-icon-144x144-precomposed.png","7bae119a33814cab2784db4a552bf7cf"],["index.html","304c8961ab5d9acf989287a958fe317a"],["manifest.json","1ac45644e98f0f6cdd1cccc6693d3538"],["scripts/main.js","9cee67b85f59bd36e13ea95ad63d0842"],["service-worker.js","afb3722e8191a47c920c0ec7c32fb7bd"],["styles/main.css","d41d8cd98f00b204e9800998ecf8427e"]];
 /* eslint-enable quotes, comma-spacing */
-var CacheNamePrefix = 'sw-precache-v1-sw-precache-' + (self.registration ? self.registration.scope : '') + '-';
+var CacheNamePrefix = 'sw-precache-v1-BarePWA-' + (self.registration ? self.registration.scope : '') + '-';
 
 
 var IgnoreUrlParametersMatching = [/^utm_/];
@@ -241,7 +241,3 @@ self.addEventListener('fetch', function(event) {
     }
   }
 });
-
-
-
-
