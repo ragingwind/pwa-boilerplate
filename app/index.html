@@ -12,11 +12,21 @@
   <!-- styles -->
   <link rel="stylesheet" href="styles/main.css">
 
-	<!-- configuration for android. theme color and homescreen -->
+	<!-- Adding to homescreen for android  -->
 	<meta name="theme-color" content="#2E3AA1">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="application-name" content="Bare Progressive Web App">
 	<link rel="icon" sizes="192x192" href="images/icons/chrome-touch-icon-192x192.png ">
+
+	<!-- Adding to homescreen for safari on ios -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Weather App">
+	<link rel="apple-touch-icon" href="images/icons/apple-touch-icon-152x152.png">
+
+	<!-- Adding to homescreen for windows -->
+	<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
 	<header>
@@ -35,7 +45,7 @@
 	<script src="scripts/main.js"></script>
 	<script>
 	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('service-worker.js').then(function() {
+		navigator.serviceWorker.register('service-worker.js').then(() => {
 			console.log("Service Worker Registered");
 		});
 	}
