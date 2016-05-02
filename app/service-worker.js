@@ -29,7 +29,7 @@
 
 
 /* eslint-disable quotes, comma-spacing */
-var PrecacheConfig = [["images/icons/apple-touch-icon-152x152.png","5c1a7c28d47287cd30fac4f3a28d1a8b"],["images/icons/chrome-splashscreen-icon-384x384.png","c16c62c51961d195f9306a7f3a8825f1"],["images/icons/chrome-touch-icon-192x192.png","0ad89bc5c2a47f9d942528ce6379a9e9"],["images/icons/icon-128x128.png","d69c7d408c9eb146ed87718c05c54cb1"],["images/icons/icon-512x512.png","cd092ddbc3a5fb981b54d7150315dc23"],["images/icons/icon-72x72.png","0aa358b0573adc305f30ebd85df7e25b"],["images/icons/icon-96x96.png","9be2401df0b3a50d71c700acdf771d9b"],["images/icons/ms-touch-icon-144x144-precomposed.png","7bae119a33814cab2784db4a552bf7cf"],["index.html","304c8961ab5d9acf989287a958fe317a"],["manifest.json","1ac45644e98f0f6cdd1cccc6693d3538"],["scripts/main.js","9cee67b85f59bd36e13ea95ad63d0842"],["service-worker.js","afb3722e8191a47c920c0ec7c32fb7bd"],["styles/main.css","d41d8cd98f00b204e9800998ecf8427e"]];
+var PrecacheConfig = [["images/icons/apple-touch-icon-152x152.png","5c1a7c28d47287cd30fac4f3a28d1a8b"],["images/icons/chrome-splashscreen-icon-384x384.png","c16c62c51961d195f9306a7f3a8825f1"],["images/icons/chrome-touch-icon-192x192.png","0ad89bc5c2a47f9d942528ce6379a9e9"],["images/icons/icon-128x128.png","d69c7d408c9eb146ed87718c05c54cb1"],["images/icons/icon-512x512.png","cd092ddbc3a5fb981b54d7150315dc23"],["images/icons/icon-72x72.png","0aa358b0573adc305f30ebd85df7e25b"],["images/icons/icon-96x96.png","9be2401df0b3a50d71c700acdf771d9b"],["images/icons/ms-touch-icon-144x144-precomposed.png","7bae119a33814cab2784db4a552bf7cf"],["index.html","35512c27c07d9a81a41a75c901695656"],["manifest.json","1ac45644e98f0f6cdd1cccc6693d3538"],["scripts/main.js","9cee67b85f59bd36e13ea95ad63d0842"],["service-worker.js","6e0b3dd607284e4a1154f7c9bb8e18e2"],["styles/main.css","d41d8cd98f00b204e9800998ecf8427e"]];
 /* eslint-enable quotes, comma-spacing */
 var CacheNamePrefix = 'sw-precache-v1-BarePWA-' + (self.registration ? self.registration.scope : '') + '-';
 
@@ -241,3 +241,7 @@ self.addEventListener('fetch', function(event) {
     }
   }
 });
+
+
+
+
