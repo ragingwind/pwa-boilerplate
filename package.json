@@ -16,7 +16,7 @@
   "scripts": {
     "precache": "sw-precache --cache-id=\"$npm_package_productName\" --root=app",
     "postinstall": "pwa-manifest ./app ./app/images/icons --icons=./res/icon.png",
-    "start": "npm run precache && http-server ./app -d -p 9000"
+    "start": "npm run precache && http-server ./ -d -p 9000 -c-1"
   },
   "devDependencies": {
     "http-server": "^0.9.0",
