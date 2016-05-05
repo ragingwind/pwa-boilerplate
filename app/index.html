@@ -9,8 +9,8 @@
 	<!-- web manifest -->
 	<link rel="manifest" href="manifest.json">
 
-  <!-- styles -->
-  <link rel="stylesheet" href="styles/main.css">
+	<!-- styles -->
+	<link rel="stylesheet" href="styles/main.css">
 
 	<!-- Adding to homescreen for android  -->
 	<meta name="theme-color" content="#2E3AA1">
@@ -27,28 +27,67 @@
 	<!-- Adding to homescreen for windows -->
 	<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
 	<meta name="msapplication-TileColor" content="#2F3BA2">
+
+	<!-- MDL -->
+	<link rel="stylesheet" href="../node_modules/material-design-lite/material.min.css">
+	<script src="../node_modules/material-design-lite/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<!-- Uses a transparent header that draws on top of the layout's background -->
+	<style>
+		<style> .demo-layout-transparent {
+			background: url('images/transparent.jpg') center / cover;
+		}
+
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+			/* This background is dark, so we set text to white. Use 87% black instead if your background is light. */
+			color: white;
+		}
+	</style>
+	</style>
+
 </head>
+
 <body>
-	<header>
-		<h1>Bare Progress Webapp</h1>
-	</header>
-
-	<main class="main"></main>
-
-	<div class="dialog-container"></div>
-
-	<div class="loader">
-		<svg viewBox="0 0 32 32" width="32" height="32">
-			<circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-		</svg>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">Title</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation mdl-layout--large-screen-only">
+					<a class="mdl-navigation__link" href="">Link</a>
+					<a class="mdl-navigation__link" href="">Link</a>
+					<a class="mdl-navigation__link" href="">Link</a>
+					<a class="mdl-navigation__link" href="">Link</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Title</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="">Link</a>
+				<a class="mdl-navigation__link" href="">Link</a>
+				<a class="mdl-navigation__link" href="">Link</a>
+				<a class="mdl-navigation__link" href="">Link</a>
+			</nav>
+		</div>
+		<main class="mdl-layout__content">
+			<div class="page-content">
+				<!-- Your content goes here -->
+			</div>
+		</main>
 	</div>
 	<script src="scripts/main.js"></script>
 	<script>
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('service-worker.js').then(() => {
-			console.log("Service Worker Registered");
-		});
-	}
-</script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js').then(() => {
+				console.log("Service Worker Registered");
+			});
+		}
+	</script>
 </body>
 </html>
